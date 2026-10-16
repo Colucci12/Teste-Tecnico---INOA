@@ -14,7 +14,7 @@ public static class ConsultaApi
         using HttpClient httpClient = new HttpClient();
         httpClient.Timeout = TimeSpan.FromSeconds(15);
 
-        ClienteBrapi cliente = new ClienteBrapi(httpClient);
+        InterfaceCotacoes cliente = new ClienteBrapi(httpClient);
 
         try
         {

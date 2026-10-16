@@ -4,7 +4,7 @@ using System.Text.Json;
 
 namespace AprendendoCsharp.Cotacoes;
 
-public class ClienteBrapi
+public class ClienteBrapi : InterfaceCotacoes
 {
     private readonly HttpClient httpClient;
 

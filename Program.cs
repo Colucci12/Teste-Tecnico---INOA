@@ -1,5 +1,6 @@
 using AprendendoCsharp.Aplicacao;
 using AprendendoCsharp.Entrada;
+using AprendendoCsharp.Cotacoes;
 
 DadosEntrada? parametros = ConsoleInput.Ler(args);
 
@@ -8,4 +9,11 @@ if (parametros == null)
     return;
 }
 
-await ConsultaApi.ExecutarAsync(parametros.Ativo);
+DadosCotacao? cotacao = await ConsultaApi.ExecutarAsync(parametros.Ativo);
+
+if (cotacao == null)
+{
+    return;
+}
+
+await EnvioEmail.ExecutarAsync(cotacao);

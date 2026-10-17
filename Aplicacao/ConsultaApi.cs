@@ -4,7 +4,7 @@ namespace AprendendoCsharp.Aplicacao;
 
 public static class ConsultaApi
 {
-    public static async Task ExecutarAsync(string ticker)
+    public static async Task<DadosCotacao?> ExecutarAsync(string ticker)
     {
         if (File.Exists(".env"))
         {
@@ -20,6 +20,8 @@ public static class ConsultaApi
         {
             DadosCotacao cotacao = await cliente.ConsultarAsync(ticker);
             Console.WriteLine(cotacao);
+
+            return cotacao;
         }
         catch (HttpRequestException exception)
         {
@@ -41,5 +43,7 @@ public static class ConsultaApi
             Console.Error.WriteLine(exception.Message);
             Environment.ExitCode = 1;
         }
+
+        return null;
     }
 }

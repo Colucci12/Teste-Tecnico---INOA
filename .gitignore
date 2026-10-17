@@ -1,0 +1,9 @@
+bin/
+obj/
+publicacao/
+.env
+.env.*
+!.env.exemplo
+appsettings.json
+appsettings.*.json
+!appsettings.exemplo.json

@@ -1,0 +1,14 @@
+services:
+  monitor:
+    image: mcr.microsoft.com/dotnet/sdk:10.0.402
+    working_dir: /projeto
+
+    volumes:
+      - .:/projeto
+
+    entrypoint:
+      - dotnet
+      - run
+      - --project
+      - aprendendo Csharp.csproj
+      - --

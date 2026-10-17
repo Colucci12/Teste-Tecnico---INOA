@@ -48,7 +48,7 @@ public static class EnvioEmail
             texto += "Preço: R$ " + cotacao.Preco.ToString("F2") + Environment.NewLine;
             texto += "Horário da cotação: " + cotacao.Horario;
 
-            ClienteSmtp cliente = new ClienteSmtp(configuracao);
+            InterfaceEmail cliente = new ClienteSmtp(configuracao);
 
             await cliente.EnviarAsync(assunto, texto);
 

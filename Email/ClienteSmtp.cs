@@ -4,7 +4,7 @@ using MimeKit;
 
 namespace AprendendoCsharp.Email;
 
-public class ClienteSmtp
+public class ClienteSmtp : InterfaceEmail
 {
     private readonly ConfiguracaoSmtp configuracao;
 

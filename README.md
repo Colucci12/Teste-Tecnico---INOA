@@ -25,6 +25,11 @@ Logo que começa o programa já efetua a primeira consulta. Se o preço já esti
 
 ## Decisões e aprendizados
 
+Sobre a consulta dos ativos, aqui tinham algumas opções que considerei:
+1. Polling - Essa opção foi a utilizada, é possivel configurar no `.env` o tempo entre uma consulta e outra. Alguns problemas dessa opção são: a consulta da cotação não vai estar 100% sincronizada, as APIs geralmente tem limites de consulta por mes + um limite de consultas em curto período de tempo.
+2. WebHook - Esse é um serviço que tem em diversas APIs, basicamente o programa só cadastra na API quais os limites e espera esta mesma API retornar. Esse não foi escolhido por que julguei que iria tercerizar parte do core desse desafio, então não fazia sentido nesse caso. Os problemas dessa solução são: Fica dependente de um terceiro, se essa API falhar, atrasar ou algo assim, o programa fica dependente dela. Simplifica a regra mas aumenta a dependência de um serviço terceiro.
+3. Websocket - Nesse serviço uma conexão aberta e os dados chegam do fornecedor através dela. Essa solução traz atualizações muito rapidamente, entretanto alguns problemas são: dependencia da qualidade do fornecedor, se ele atrasa os dados, o programa recebe atrasado da mesma forma. É um tipo de conexão que é mais complexa de se implementar e manter do que consultas como nas duas opções acima.
+
 ### 1. Arquitetura e organização
 
 Para o escopo deste desafio, escolhi uma aplicação **monolítica**. Para um programa de console com esse escopo, essa estrutura já atende aos requisitos.
@@ -54,11 +59,6 @@ As interfaces de cotação e e-mail foram outra parte do aprendizado. O `Monitor
 Para guardar os dados de entrada, cotação e configuração SMTP, usei `record`. Mantive o mesmo formato nos três para deixar a leitura consistente enquanto aprendia a sintaxe.
 
 Na consulta, usei o `HttpClient`, que já vem no .NET. No envio de e-mail, usei MailKit com SMTP e testei com Gmail. As configurações ficam no `.env`, e o repositório contém apenas o `.env.exemplo`, sem credenciais.
-
-Sobre a consulta dos ativos, aqui tinham algumas opções que considerei:
-1. Pooling - Essa opção foi a utilizada, é possivel configurar no `.env` o tempo entre uma consulta e outra. Alguns problemas dessa opção são: a consulta da cotação não vai estar 100% sincronizada, as APIs geralmente tem limites de consulta por mes + um limite de consultas em curto período de tempo.
-2. WebHook - Esse é um serviço que tem em diversas APIs, basicamente o programa só cadastra na API quais os limites e espera esta mesma API retornar. Esse não foi escolhido por que julguei que iria tercerizar o core desse desafio, então não fazia sentido nesse caso. Os problemas dessa solução são: Fica dependente de um terceiro, se essa API falhar, atrasar ou algo assim, o programa fica dependente dela. Simplifica a regra mas aumenta a dependência de um serviço terceiro.
-3. Websocket - Nesse serviço uma conexão aberta e os dados chegam do fornecedor através dela. Essa solução traz atualizações muito rapidamente, entretanto alguns problemas são: dependencia da qualidade do fornecedor, se ele atrasa os dados, o programa recebe atrasado da mesma forma. É um tipo de conexão que é mais complexa de se implementar e manter do que consultas como nas duas opções acima.
 
 > **Nota**
 >

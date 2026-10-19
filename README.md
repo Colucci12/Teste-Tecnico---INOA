@@ -1,6 +1,6 @@
 # Monitor de Cotações - Teste Técnico Inoa
 
-Eu ainda não tinha trabalhado com C# e .NET, então aproveitei esse desafio também como uma oportunidade de aprender. Além de desenvolver a aplicação, fui conhecendo o ambiente, as ferramentas e algumas das formas de organizar código nesse ecossistema. Nesse README vou registrar como o projeto funciona, as decisões que tomei e o que fui aprendendo.
+Este projeto implementa um monitor de cotações em C#/.NET para o desafio técnico da INOA. Como meu contato prévio com C# era limitado, também usei o desenvolvimento para me familiarizar com o ecossistema e seus padrões. Nesse README vou registrar como o projeto funciona, as decisões que tomei.
 
 ## Como o projeto funciona
 
@@ -108,7 +108,7 @@ docker compose -f compose.criar-executavel.yaml run --rm publicar
 A saída fica em `publicacao/`, com o executável e suas dependências. Essa publicação faz com que o .NET não tenha necessidade de estar instalado na máquina.
 Pra rodar:
 ```powershell
-& ".\publicacao\aprendendo Csharp.exe" PETR4 23.61 20.78
+& ".\publicacao\MonitorCotacoes.exe" PETR4 23.61 20.78
 ```
 
 O `.env` é procurado na pasta atual do terminal. É só garantir que o `.env` está criado e preenchido corretamente
@@ -127,7 +127,7 @@ Usei xUnit em um projeto separado. Mantive o escopo em três testes da `RegraAle
 
 Para executar, com o SDK do .NET instalado:
 ```powershell
-dotnet test ".\Testes\AprendendoCsharp.Testes.csproj"
+dotnet test ".\Testes\MonitorCotacoes.Testes.csproj"
 ```
 
 Esses testes usam valores fixos e não fazem consultas à brapi nem enviam e-mails.

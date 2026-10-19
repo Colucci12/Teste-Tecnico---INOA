@@ -1,5 +1,5 @@
-using AprendendoCsharp.Aplicacao;
-using AprendendoCsharp.Entrada;
+using MonitorCotacoes.Aplicacao;
+using MonitorCotacoes.Entrada;
 
 DadosEntrada? parametros = ConsoleInput.Ler(args);
 

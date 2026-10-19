@@ -1,4 +1,4 @@
-namespace AprendendoCsharp.Monitoramento;
+namespace MonitorCotacoes.Monitoramento;
 
 public enum TipoAlerta
 {

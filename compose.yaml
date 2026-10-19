@@ -10,5 +10,5 @@ services:
       - dotnet
       - run
       - --project
-      - aprendendo Csharp.csproj
+      - MonitorCotacoes.csproj
       - --

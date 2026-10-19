@@ -2,7 +2,7 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
-namespace AprendendoCsharp.Cotacoes;
+namespace MonitorCotacoes.Cotacoes;
 
 public class ClienteBrapi : InterfaceCotacoes
 {

@@ -1,9 +1,9 @@
-using AprendendoCsharp.Cotacoes;
-using AprendendoCsharp.Email;
-using AprendendoCsharp.Entrada;
-using AprendendoCsharp.Monitoramento;
+using MonitorCotacoes.Cotacoes;
+using MonitorCotacoes.Email;
+using MonitorCotacoes.Entrada;
+using MonitorCotacoes.Monitoramento;
 
-namespace AprendendoCsharp.Aplicacao;
+namespace MonitorCotacoes.Aplicacao;
 
 public static class ExecutarMonitoramento
 {

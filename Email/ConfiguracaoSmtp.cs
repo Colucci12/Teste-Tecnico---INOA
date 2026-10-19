@@ -1,4 +1,4 @@
-namespace AprendendoCsharp.Email;
+namespace MonitorCotacoes.Email;
 
 public record ConfiguracaoSmtp(
     string Servidor,

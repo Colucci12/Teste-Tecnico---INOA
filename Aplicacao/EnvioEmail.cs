@@ -1,6 +1,6 @@
-using AprendendoCsharp.Email;
+using MonitorCotacoes.Email;
 
-namespace AprendendoCsharp.Aplicacao;
+namespace MonitorCotacoes.Aplicacao;
 
 public static class EnvioEmail
 {

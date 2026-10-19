@@ -1,6 +1,6 @@
-using AprendendoCsharp.Entrada;
+using MonitorCotacoes.Entrada;
 
-namespace AprendendoCsharp.Aplicacao;
+namespace MonitorCotacoes.Aplicacao;
 
 public static class ConsoleInput
 {

@@ -1,4 +1,4 @@
-namespace AprendendoCsharp.Cotacoes;
+namespace MonitorCotacoes.Cotacoes;
 
 public record DadosCotacao(
     string Ativo,

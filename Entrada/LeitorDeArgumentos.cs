@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace AprendendoCsharp.Entrada;
+namespace MonitorCotacoes.Entrada;
 
 public static class LeitorDeArgumentos
 {

@@ -1,6 +1,6 @@
-using AprendendoCsharp.Cotacoes;
+using MonitorCotacoes.Cotacoes;
 
-namespace AprendendoCsharp.Aplicacao;
+namespace MonitorCotacoes.Aplicacao;
 
 public static class ConsultaApi
 {

@@ -1,7 +1,7 @@
-using AprendendoCsharp.Entrada;
-using AprendendoCsharp.Monitoramento;
+using MonitorCotacoes.Entrada;
+using MonitorCotacoes.Monitoramento;
 
-namespace AprendendoCsharp.Testes;
+namespace MonitorCotacoes.Testes;
 
 public class RegraAlertasTestes
 {

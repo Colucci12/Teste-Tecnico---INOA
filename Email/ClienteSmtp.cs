@@ -2,7 +2,7 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 
-namespace AprendendoCsharp.Email;
+namespace MonitorCotacoes.Email;
 
 public class ClienteSmtp : InterfaceEmail
 {

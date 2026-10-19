@@ -1,8 +1,8 @@
-using AprendendoCsharp.Cotacoes;
-using AprendendoCsharp.Email;
-using AprendendoCsharp.Entrada;
+using MonitorCotacoes.Cotacoes;
+using MonitorCotacoes.Email;
+using MonitorCotacoes.Entrada;
 
-namespace AprendendoCsharp.Monitoramento;
+namespace MonitorCotacoes.Monitoramento;
 
 public class MonitorAtivo
 {

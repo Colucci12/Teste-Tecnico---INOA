@@ -1,6 +1,6 @@
-using AprendendoCsharp.Entrada;
+using MonitorCotacoes.Entrada;
 
-namespace AprendendoCsharp.Monitoramento;
+namespace MonitorCotacoes.Monitoramento;
 
 public static class RegraAlerta
 {

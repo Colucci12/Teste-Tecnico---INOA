@@ -7,7 +7,7 @@ services:
       - .:/projeto
 
     command: >
-      dotnet publish "aprendendo Csharp.csproj"
+      dotnet publish "MonitorCotacoes.csproj"
       -c Release
       -r win-x64
       --self-contained true
